@@ -1,6 +1,6 @@
 package org.craftedsw.tripservicekata.user;
 
-import org.craftedsw.tripservicekata.exception.DependendClassCallDuringUnitTestException;
+import org.craftedsw.tripservicekata.exception.CollaboratorCallException;
 
 public class UserSession {
 
@@ -13,13 +13,8 @@ public class UserSession {
 		return userSession;
 	}
 
-	public boolean isUserLoggedIn(User user) {
-		throw new DependendClassCallDuringUnitTestException(
-				"UserSession.isUserLoggedIn() should not be called in an unit test");
-	}
-
 	public User getLoggedUser() {
-		throw new DependendClassCallDuringUnitTestException(
+		throw new CollaboratorCallException(
 				"UserSession.getLoggedUser() should not be called in an unit test");
 	}
 
