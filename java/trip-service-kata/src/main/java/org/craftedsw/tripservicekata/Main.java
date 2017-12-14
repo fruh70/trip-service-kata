@@ -1,6 +1,6 @@
 package org.craftedsw.tripservicekata;
 
-import org.craftedsw.tripservicekata.exception.UserNotLoggedInException;
+import org.craftedsw.tripservicekata.user.UserNotLoggedInException;
 import org.craftedsw.tripservicekata.trip.TripService;
 import org.craftedsw.tripservicekata.user.User;
 
