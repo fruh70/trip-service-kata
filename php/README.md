@@ -28,5 +28,11 @@ Then open report/index.html in a browser. For instance
     open report/index.html       # MacOS
     firefox report/index.html    # windows/linux
 
-Enjoy
+## Pitfalls
+### Testing exceptions
+The annotation @expectedException always takes a fully qualified classname, no matter what use clauses have been defined. The following is valid
 
+     * @expectedException TripServiceKata\Trip\UserNotLoggedInException
+while this is not
+
+     * @expectedException UserNotLoggedInException
