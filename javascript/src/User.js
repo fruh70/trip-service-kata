@@ -1,9 +1,6 @@
 "use strict";
 
 module.exports = class User {
-    trips;
-    friends;
-    name;
 
     constructor(name) {
         this.name = name;
