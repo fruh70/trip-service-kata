@@ -2,7 +2,6 @@
 
 namespace TripServiceKata\Trip;
 
-use Mockery\Exception;
 use TripServiceKata\User\User;
 use TripServiceKata\User\UserSession;
 use TripServiceKata\Exception\UserNotLoggedInException;
@@ -28,5 +27,4 @@ class TripService
             throw new UserNotLoggedInException();
         }
     }
-
 }
