@@ -5,15 +5,7 @@ import * as sinon from "sinon";
 import UserNotLoggedInException from "../src/exception/UserNotLoggedInException"
 
 
-describe("TripServiceShould", () => {
-
-        const tripService = new TripService();
-    it("refuses to give trips for guests", () => {
-
-
-        expect(() => tripService.getTripsByUser2(new User(), null)).toThrow(UserNotLoggedInException);
-
-    });
+describe("TripService", () => {
 
 
 });
