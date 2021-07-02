@@ -5,12 +5,17 @@ import java.util.List;
 
 import org.craftedsw.tripservicekata.user.UserNotLoggedInException;
 import org.craftedsw.tripservicekata.user.User;
-import org.craftedsw.tripservicekata.user.UserSession;
+
 
 public class TripService {
 
-	public List<Trip> getTripsByUser(User user) throws UserNotLoggedInException {
-		return getTripsByUser(user, UserSession.getInstance().getLoggedUser());
+	TripDAO tripDAO = null;
+
+	public TripService() {
+	}
+
+	public TripService(TripDAO tripDAO) {
+		this.tripDAO = tripDAO;
 	}
 
 	public List<Trip> getTripsByUser(User user, User loggedUser) throws UserNotLoggedInException {
@@ -21,8 +26,8 @@ public class TripService {
 		return user.isFriend(loggedUser) ? findTripsByUser(user) : new ArrayList<>();
 	}
 
-	protected List<Trip> findTripsByUser(User user) {
-		return TripDAO.findTripsByUser(user);
+	public List<Trip> findTripsByUser(User user) {
+		return tripDAO.findTripsByUser(user);
 	}
 
 }

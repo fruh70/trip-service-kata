@@ -1,6 +1,5 @@
 package org.craftedsw.tripservicekata.trip;
 
-import org.craftedsw.tripservicekata.exception.CollaboratorCallException;
 import org.craftedsw.tripservicekata.user.User;
 import org.craftedsw.tripservicekata.user.UserNotLoggedInException;
 import org.junit.jupiter.api.Assertions;
@@ -14,7 +13,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class TripServiceTest {
 
-    TripService service = new TripService();
+    TripService service = new TripService(new TripDAO());
     User user = new User();
     User loggedUser = new User();
 
