@@ -36,7 +36,7 @@ public class TripServiceTest {
     }
 
     @Test
-    void name() {
+    void getTripsWhenFriendIsLoggedUser() {
         TripService testableService = Mockito.spy(service);
         List<Trip> trips = new ArrayList<>();
         trips.add(new Trip());
